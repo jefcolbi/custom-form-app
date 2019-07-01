@@ -46,3 +46,4 @@ class ExtraInfoForm(ModelForm):
     class Meta(object):
         model = ExtraInfo
         fields = ('number',)
+        labels = {'number':'Mobile phone number'}
