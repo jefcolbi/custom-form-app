@@ -45,4 +45,4 @@ class ExtraInfoForm(ModelForm):
 
     class Meta(object):
         model = ExtraInfo
-        exclude = ('number',)
+        exclude = ('number','user')
