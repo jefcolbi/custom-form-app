@@ -32,9 +32,7 @@ class ExtraInfoForm(ModelForm):
     """
     The fields on this form are derived from the ExtraInfo model in models.py.
     """
-    
-    number = NigerianField()
-    
+        
     def __init__(self, *args, **kwargs):
         super(ExtraInfoForm, self).__init__(*args, **kwargs)
         self.fields['number'].error_messages = {
