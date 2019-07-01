@@ -33,7 +33,7 @@ class ExtraInfoForm(ModelForm):
     The fields on this form are derived from the ExtraInfo model in models.py.
     """
     
-    number = forms.CharField(validators=[validate_number])
+    number = forms.CharField(validators=[validate_number], help_text="Phone number")
         
     def __init__(self, *args, **kwargs):
         super(ExtraInfoForm, self).__init__(*args, **kwargs)
