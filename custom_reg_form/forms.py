@@ -7,7 +7,7 @@ RGX_NUMBER = re.compile(r"(?:\+234)?(?:070|080|081|090)\d{8}")
 
 def validate_number(value):
     if not RGX_NUMBER.match(value):
-        raise forms.ValidationError(_('Please enter a valid phone number'))
+        raise forms.ValidationError('Please enter a valid phone number')
 
 class NigerianField(forms.CharField):
     """
