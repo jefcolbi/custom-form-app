@@ -45,4 +45,5 @@ class ExtraInfoForm(ModelForm):
 
     class Meta(object):
         model = ExtraInfo
-        exclude = ('number','user')
+        field_classes = {'number':NigerianField}
+        fields = ('number',)
