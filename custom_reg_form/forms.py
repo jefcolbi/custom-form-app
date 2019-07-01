@@ -32,6 +32,8 @@ class ExtraInfoForm(ModelForm):
     """
     The fields on this form are derived from the ExtraInfo model in models.py.
     """
+    
+    number = CharField(validators=[validate_number])
         
     def __init__(self, *args, **kwargs):
         super(ExtraInfoForm, self).__init__(*args, **kwargs)
@@ -43,5 +45,4 @@ class ExtraInfoForm(ModelForm):
 
     class Meta(object):
         model = ExtraInfo
-        field_classes = {'number':NigerianField}
         fields = ('number',)
