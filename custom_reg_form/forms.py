@@ -41,6 +41,7 @@ class ExtraInfoForm(ModelForm):
             "required": u"Please give us your number.",
             "invalid": u"Please use a valid nigerian phone number.",
         }
+        self.fields['number'].widget.attrs['placeholder'] = 'Mobile phone number'
         
 
     class Meta(object):
