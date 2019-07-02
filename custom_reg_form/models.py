@@ -12,3 +12,4 @@ class ExtraInfo(models.Model):
     """
     user = models.OneToOneField(USER_MODEL, null=True)
     number = models.CharField(max_length=15)
+    code = models.CharField(max_length=15, blank=True, null=True)
