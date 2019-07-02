@@ -37,7 +37,7 @@ class ExtraInfoForm(ModelForm):
                             widget=forms.TextInput(attrs={'placeholder':'Phone number'}),
                             label='Phone number')
     
-    code = forms.CharField(help_text="Enter your registration code",
+    code = forms.CharField(help_text="Enter your registration code", required=False,
                             widget=forms.TextInput(attrs={'placeholder':'code'}),
                             label='code')
         
