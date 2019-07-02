@@ -34,7 +34,8 @@ class ExtraInfoForm(ModelForm):
     """
     
     number = forms.CharField(validators=[validate_number], help_text="Phone number",
-                            widget=forms.TextInput(attrs={'placeholder':'Phone number'}))
+                            widget=forms.TextInput(attrs={'placeholder':'Phone number'}),
+                            label='Phone number')
         
     def __init__(self, *args, **kwargs):
         super(ExtraInfoForm, self).__init__(*args, **kwargs)
