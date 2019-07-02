@@ -36,6 +36,10 @@ class ExtraInfoForm(ModelForm):
     number = forms.CharField(validators=[validate_number], help_text="Phone number",
                             widget=forms.TextInput(attrs={'placeholder':'Phone number'}),
                             label='Phone number')
+    
+    code = forms.CharField(help_text="Enter your registration code",
+                            widget=forms.TextInput(attrs={'placeholder':'code'}),
+                            label='code')
         
     def __init__(self, *args, **kwargs):
         super(ExtraInfoForm, self).__init__(*args, **kwargs)
@@ -43,7 +47,6 @@ class ExtraInfoForm(ModelForm):
             "required": u"Please give us your number.",
             "invalid": u"Please use a valid nigerian phone number.",
         }
-        self.fields['number'].widget.attrs['placeholder'] = 'Mobile phone number'
         
 
     class Meta(object):
