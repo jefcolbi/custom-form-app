@@ -39,7 +39,7 @@ class ExtraInfoForm(ModelForm):
     
     code = forms.CharField(help_text="Enter your registration code",
                            widget=forms.TextInput(attrs={'placeholder':'0000'}),
-                            label='code')
+                            label='code', required=False)
         
     def __init__(self, *args, **kwargs):
         super(ExtraInfoForm, self).__init__(*args, **kwargs)
